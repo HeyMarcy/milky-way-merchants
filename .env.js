@@ -1,0 +1,6 @@
+module.exports = {
+  TOKEN:
+    "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGlmaWVyIjoiR0FMQVhZLUdBTCIsInZlcnNpb24iOiJ2MiIsInJlc2V0X2RhdGUiOiIyMDIzLTA2LTEwIiwiaWF0IjoxNjg2Nzc0MDkzLCJzdWIiOiJhZ2VudC10b2tlbiJ9.Ba_e9_Rz-MARxpmdAhPZ8OkYMUZra_-u15XeExvjH2bZ96arhz6g0aNYh2yNyRRttpRJ3Oa91bD0RYylZexrjm3rGFdl9dBDBnO6KDNtyxp8dea3-6Vc1joqrq8tFj4ZXbvZWmv-mcrC7TVwgrH9mPYXNH9wAWquvwCuIq4ARZzoLovJm9PfD-5EoU8dExp8eMh1Ng30nuHJH91JYLdF8M9XKd9c0iLgJTjGdI0Zc_M0Y1AJJwulybvjuWSHVX5hJuMwF_E-nSdbXU2SN43mIGyzfv7YlNZqRXL9dbkEr-PipCwy0-lQP8yIVPbWHx8yOaW9uumue9s5NY2PZMRhTg",
+  AGENT: "GALAXY-GAL",
+  BASE_PATH: "https://api.spacetraders.io/v2",
+};

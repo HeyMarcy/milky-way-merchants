@@ -1,0 +1,54 @@
+{
+  "data": {
+    "systemSymbol": "X1-KS52",
+    "symbol": "X1-KS52-07960X",
+    "type": "PLANET",
+    "x": -19,
+    "y": -17,
+    "orbitals": [
+      {
+        "symbol": "X1-KS52-61262Z"
+      },
+      {
+        "symbol": "X1-KS52-31553B"
+      },
+      {
+        "symbol": "X1-KS52-25044Z"
+      }
+    ],
+    "traits": [
+      {
+        "symbol": "OVERCROWDED",
+        "name": "Overcrowded",
+        "description": "A waypoint teeming with inhabitants, leading to cramped living conditions and a high demand for resources."
+      },
+      {
+        "symbol": "HIGH_TECH",
+        "name": "High-Tech",
+        "description": "A center of innovation and cutting-edge technology, driving progress and attracting skilled individuals from around the galaxy."
+      },
+      {
+        "symbol": "BUREAUCRATIC",
+        "name": "Bureaucratic",
+        "description": "A waypoint governed by complex regulations, red tape, and layers of administration, often leading to inefficiencies and frustration."
+      },
+      {
+        "symbol": "TEMPERATE",
+        "name": "Temperate",
+        "description": "A world with a mild climate and balanced ecosystem, providing a comfortable environment for a variety of life forms and supporting diverse industries."
+      },
+      {
+        "symbol": "MARKETPLACE",
+        "name": "Marketplace",
+        "description": "A thriving center of commerce where traders from across the galaxy gather to buy, sell, and exchange goods."
+      }
+    ],
+    "chart": {
+      "submittedBy": "COSMIC",
+      "submittedOn": "2023-06-10T15:55:44.111Z"
+    },
+    "faction": {
+      "symbol": "COSMIC"
+    }
+  }
+}
