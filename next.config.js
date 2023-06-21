@@ -11,6 +11,12 @@ const nextConfig = {
       },
     ],
   },
+  daisyui: {
+    themes: ["dracula", "night", "cmyk"],
+    utils: true,
+    logs: true,
+    base: true,
+  },
 };
 
 module.exports = nextConfig;
