@@ -4,3 +4,24 @@ module.exports = {
   AGENT: "GALAXY-GAL",
   BASE_PATH: "https://api.spacetraders.io/v2",
 };
+
+module.exports = {
+  TOKEN:
+    "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGlmaWVyIjoiS0FUSUUtQ09TTU9TIiwidmVyc2lvbiI6InYyIiwicmVzZXRfZGF0ZSI6IjIwMjMtMDYtMTciLCJpYXQiOjE2ODczNjE2MjYsInN1YiI6ImFnZW50LXRva2VuIn0.YZFgxQWSY8NfDASfqQqgMJj0TIdKQa1IanWSbdgIgQAhAIngAH0eMWZPNqUF0Usy6ZQUB6d6z08fskD2CTvblpU03W8lqQvZ9Ey67YUjQLimEjs0hvUkPq6z_YtrDWHTU5o-pjmoxDSRao6zk4LBH4vK7lvu77ynIxXFqtp_y2Ifm1A7RLDyhw9fFoIndS9FyS6QzFsPxQaM3fqlsQUM14oYM4fnH90tNXg0mlqkQYJkazw6haTgN7nH1igo-B41xJ9z6WYypCanfL6vcZO-tzP0f7i1kRg7b16KkjMKqlTpMlBQEL0WO6Qf40QDjbrPirsqgVqnnhWCqJuJCCzG0w",
+  AGENT: "KATIE-COSMOS",
+  BASE_PATH: "https://api.spacetraders.io/v2",
+};
+
+module.exports = {
+  TOKEN:
+    "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGlmaWVyIjoiQ0VMRVNUSU5BIiwidmVyc2lvbiI6InYyIiwicmVzZXRfZGF0ZSI6IjIwMjMtMDYtMTciLCJpYXQiOjE2ODc0NTkxOTgsInN1YiI6ImFnZW50LXRva2VuIn0.ZaRVN8qY1rXfZGqRM-fuE4DYixqV1PGfhGVtofYzqwBRSgLzUnf8gpqQ9P6WgAMWFhJJADePRkzszRW1r7Y1BdZplMD5grgqCB-AqNOh5Cvj9_B-p8F84FXcek9w3SpMVmBYwgvubIayKRQhKM6_N16asJpcHQr3Xl0Vvoc-WBXFighG_qfdcmQEM2X_WwHvpBG2DOoyBY4k6iUfdgUU5JD7VRF2J9HawJHRtL3zp2Qex1s0GbYP0y6IyRFoXXriYiXib3RsNmo09CrSmY5Wr3lOBNpPu16vO4idLyiNALnE7oSgp2cgPXezPjcdQutTlHfEwUkBdLD6fKkmDXEwnQ",
+  AGENT: "CELESTINA",
+  BASE_PATH: "https://api.spacetraders.io/v2",
+};
+
+module.exports = {
+  TOKEN:
+    "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGlmaWVyIjoiR0FMQVhZLUdBTC0yIiwidmVyc2lvbiI6InYyIiwicmVzZXRfZGF0ZSI6IjIwMjMtMDYtMTciLCJpYXQiOjE2ODc1NDgzMTksInN1YiI6ImFnZW50LXRva2VuIn0.mvaS01YDYX8NkPt6pVK6ghYpapEHAK0xGDq_ToRe5wjlDV2rMIDgCip0hQ1MkPJsavaZXOvs63y1EdUQjszWf16iN4RmTiWVlzCgy1u5HaURsKHDB6r4aoAmTXqOv3HXYmNkOxBEDlUgWIP-rqy9jjWYv8llEuWkUEJrwRBdrhWuecTTf08HeTytKG7ULQjopp8uHxg7sZd81JUzq0B6nEb041De7-naThYnkrW2hYCksUfhHfyF3kajEkzEa332n7P243gzNqHGdyITxSfFqCYUpT3X1FmuoHGASeKbmNmhwcgGCnwon70Xpipk_HULliCtLHN7_-s6cU_cdUXC0w",
+  AGENT: "GALAXY-GAL-2",
+  BASE_PATH: "https://api.spacetraders.io/v2",
+};

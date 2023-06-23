@@ -1,21 +1,25 @@
-import { Contract } from "@/types/contract";
 import Image from "next/image";
 import { readableDate, numberWithCommas } from "@/utils/utils";
+import { getContracts } from "@/app/api";
+import { Contract } from "@spacejunk/airlock";
+import { Countdown } from "@/client/Countdown";
+import AcceptContract from "./AcceptContract";
 
 export default async function ContractCard() {
-  const getAgentDataResponse = await fetch(
-    "https://api.spacetraders.io/v2/my/contracts",
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.TOKEN}`,
-      },
-      next: { revalidate: 10 },
-    }
-  );
-
-  const { data } = await getAgentDataResponse.json();
+  // const getAgentDataResponse = await fetch(
+  //   "https://api.spacetraders.io/v2/my/contracts",
+  //   {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Authorization: `Bearer ${process.env.TOKEN}`,
+  //     },
+  //     next: { revalidate: 10 },
+  //   }
+  // );
+  const data = await getContracts();
+  console.log("getMyContracts", data);
+  // TODO: iterate through array
   const contract = data[0];
 
   const {
@@ -31,10 +35,10 @@ export default async function ContractCard() {
 
   const { deadline, payment, deliver } = terms;
   const { onAccepted, onFulfilled } = payment;
-  const { tradeSymbol, destinationSymbol, unitsRequired, unitsFulfilled } =
-    deliver[0];
+  // const { tradeSymbol, destinationSymbol, unitsRequired, unitsFulfilled } =
+  //   deliver[0];
 
-  console.log(contract, "contract");
+  console.log(data, "data");
 
   return (
     <div className='card bg-base-100 shadow-xl'>
@@ -60,21 +64,38 @@ export default async function ContractCard() {
 
             <p>Deliver:</p>
             <span>
-              <p>Trade Symbol: {tradeSymbol}</p>
-              <p>Destination Symbol: {destinationSymbol}</p>
-              <p>Units Required: {unitsRequired}</p>
-              <p>Units Fulfilled: {unitsFulfilled}</p>
+              {contract.terms.deliver?.map((item, index) => (
+                <div key={index} className='mb-2'>
+                  <p className='text-sm'>Trade Symbol: {item.tradeSymbol}</p>
+                  <p className='text-sm'>
+                    Destination: {item.destinationSymbol}
+                  </p>
+                  <p className='text-sm'>
+                    Units required: {item.unitsRequired}
+                  </p>
+                  <p className='text-sm'>
+                    Units fulfilled: {item.unitsFulfilled}
+                  </p>
+                </div>
+              ))}
             </span>
             <p>Accepted:</p>
             <p>{accepted ? "yes" : "no"}</p>
             <p>Fulfilled:</p>
             <p>{fulfilled ? "yes" : "no"}</p>
             <p>deadlineToAccept:</p>
-            <p>{readableDate(deadlineToAccept)}</p>
+            <p>{deadlineToAccept ? readableDate(deadlineToAccept) : null}</p>
 
             <p>expiration:</p>
             <p>{readableDate(expiration)}</p>
           </div>
+          {!contract.accepted && <AcceptContract contactId={id} />}
+          <p className='text-sm mb-2'>
+            Fulfilled: {contract.fulfilled ? "Yes" : "No"}
+          </p>
+          <p className='text-sm mb-2'>
+            Expiration: <Countdown targetDate={expiration} />
+          </p>
         </div>
       </div>
     </div>
