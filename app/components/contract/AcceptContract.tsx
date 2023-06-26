@@ -4,8 +4,8 @@ import Button from "@/client/button";
 import { Contract } from "@spacejunk/airlock";
 import { acceptContract } from "@/app/api";
 
-export default async function AcceptContract(contractId: string) {
-  const handleAcceptContract = () => acceptContract(contractId);
+export default async function AcceptContract(values: { id: string }) {
+  const handleAcceptContract = () => acceptContract(values.id);
 
-  return <Button onClick={handleAcceptContract} />;
+  return <Button onClick={handleAcceptContract}>Accept Contract </Button>;
 }

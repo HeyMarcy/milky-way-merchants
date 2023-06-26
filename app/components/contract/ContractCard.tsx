@@ -6,17 +6,6 @@ import { Countdown } from "@/client/Countdown";
 import AcceptContract from "./AcceptContract";
 
 export default async function ContractCard() {
-  // const getAgentDataResponse = await fetch(
-  //   "https://api.spacetraders.io/v2/my/contracts",
-  //   {
-  //     method: "GET",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Authorization: `Bearer ${process.env.TOKEN}`,
-  //     },
-  //     next: { revalidate: 10 },
-  //   }
-  // );
   const data = await getContracts();
   console.log("getMyContracts", data);
   // TODO: iterate through array
@@ -35,8 +24,6 @@ export default async function ContractCard() {
 
   const { deadline, payment, deliver } = terms;
   const { onAccepted, onFulfilled } = payment;
-  // const { tradeSymbol, destinationSymbol, unitsRequired, unitsFulfilled } =
-  //   deliver[0];
 
   console.log(data, "data");
 
@@ -89,7 +76,7 @@ export default async function ContractCard() {
             <p>expiration:</p>
             <p>{readableDate(expiration)}</p>
           </div>
-          {!contract.accepted && <AcceptContract contactId={id} />}
+          {!contract.accepted && <AcceptContract id={id} />}
           <p className='text-sm mb-2'>
             Fulfilled: {contract.fulfilled ? "Yes" : "No"}
           </p>
