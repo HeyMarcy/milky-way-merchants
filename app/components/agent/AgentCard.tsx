@@ -11,7 +11,6 @@ export default async function AgentCard() {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.TOKEN}`,
       },
-      next: { revalidate: false },
     }
   );
 

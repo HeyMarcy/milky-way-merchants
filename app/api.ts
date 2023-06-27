@@ -5,6 +5,7 @@ import {
   FleetApi,
   GetShipyardRequest,
   PurchaseShipRequest,
+  RegisterRequest,
   ShipCargoItem,
   Survey,
   SystemsApi,
@@ -15,27 +16,30 @@ export const config = new Configuration({
 });
 export const badRequest = async () => {
   const fleet = new FleetApi(config);
-  const res = await fleet.getShipCooldown('asdfasdfasa');
+  const res = await fleet.getShipCooldown("asdfasdfasa");
   if (res) {
     return res.data;
   }
-  return undefined
+  return undefined;
 };
 
 export const getAgent = async () => {
-  const agent = new AgentsApi(config)
-  const { data } = await agent.getMyAgent()
-  return data
-}
+  const agent = new AgentsApi(config);
+  const { data } = await agent.getMyAgent();
+  return data;
+};
 
-export const purchaseShip = async ({shipType, waypointSymbol}: PurchaseShipRequest) => {
+export const purchaseShip = async ({
+  shipType,
+  waypointSymbol,
+}: PurchaseShipRequest) => {
   const fleet = new FleetApi(config);
   const { data } = await fleet.purchaseShip({
     shipType,
-    waypointSymbol
-  })
-  return data
-}
+    waypointSymbol,
+  });
+  return data;
+};
 
 export const getShips = async () => {
   const fleet = new FleetApi(config);
@@ -94,13 +98,12 @@ export const refuelShip = async (shipSymbol: string) => {
 
 export const getShipCooldown = async (shipSymbol: string) => {
   const fleet = new FleetApi(config);
-  console.log("SANITY")
   const res = await fleet.getShipCooldown(shipSymbol);
-  console.log('=================cooldown res:', res)
+  console.log("=================cooldown res:", res);
   if (res) {
     return res.data;
   }
-  return undefined
+  return undefined;
 };
 
 export const sellCargo = async ({
@@ -156,13 +159,12 @@ export const getShipyard = async ({
   const systems = new SystemsApi(config);
   const { data } = await systems.getShipyard(systemSymbol, waypointSymbol);
   return data;
-
 };
 export const getContracts = async () => {
   const contracts = new ContractsApi(config);
-  const { data } = await contracts.getContracts()
-  return data
-}
+  const { data } = await contracts.getContracts();
+  return data;
+};
 export const acceptContract = async (contractId: string) => {
   const contractApi = new ContractsApi(config);
   try {
