@@ -71,3 +71,36 @@ function RegisterForm() {
 }
 
 export default RegisterForm;
+
+// const { data } = await getAgentDataResponse.json();
+// const { symbol, credits, startingFaction, headquarters }: Agent = data;
+
+// const options = {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   body: JSON.stringify({
+//     symbol: symbolInput,
+//     faction: factionInput,
+//     email: emailInput ? emailInput : null,
+//   }),
+// };
+
+// const onRegisterAgent = await fetch(
+//   "https://api.spacetraders.io/v2/register",
+//   options
+// )
+// .then((response) => response.json())
+// .then((response) => {
+//   if (response.error) {
+//     const token = response.data.token;
+//     const symbol = response.data.agent.symbol;
+
+//     // Save to localStorage
+//     localStorage.setItem(symbol, token);
+//   }
+// })
+// .catch((err) => {
+//   console.error(err);
+// });
