@@ -1,6 +1,5 @@
 "use client";
 import React, { useRef } from "react";
-import { RegisterRequest } from "@spacejunk/airlock";
 
 const registerAgent = async (symbol: string, faction: string) => {
   const response = await fetch("https://api.spacetraders.io/v2/register", {
@@ -20,7 +19,7 @@ const registerAgent = async (symbol: string, faction: string) => {
   return data;
 };
 
-function LoginForm() {
+function RegisterForm() {
   const symbolInputRef = useRef<HTMLInputElement | null>(null);
   const factionInputRef = useRef<HTMLInputElement | null>(null);
 
@@ -71,4 +70,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default RegisterForm;

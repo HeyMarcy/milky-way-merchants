@@ -25,3 +25,8 @@ module.exports = {
   AGENT: "GALAXY-GAL-2",
   BASE_PATH: "https://api.spacetraders.io/v2",
 };
+module.exports = {
+  TOKEN: "",
+  AGENT: "CELESTINA-2",
+  BASE_PATH: "https://api.spacetraders.io/v2",
+};

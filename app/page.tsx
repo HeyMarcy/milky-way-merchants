@@ -1,6 +1,6 @@
 // import AgentCard from "./components/agent/AgentCard";
 // import ContractCard from "./components/contract/ContractCard";
-import LoginForm from "./components/register/LoginForm";
+import RegisterForm from "./components/register/RegisterForm";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <div className='z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex'>
         {/* <AgentCard />
         <ContractCard /> */}
-        <LoginForm />
+        <RegisterForm />
       </div>
     </main>
   );
